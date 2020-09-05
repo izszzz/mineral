@@ -1,0 +1,30 @@
+.sidebar {
+  position: sticky;
+  top: 80px;
+  left: 0;
+  box-sizing: border-box;
+  height: calc(100vh - 80px); /*80px is header height*/
+  width: 20%;
+  padding: 20px;
+  border-right: solid 1px var(--main-border-color);
+}
+.ul {
+  composes: ul from "../../App.css";
+}
+.link {
+  composes: link from "../../App.css";
+}
+.li {
+  margin: 20px 0;
+  color: var(--main-font-color);
+  font-size: var(--normal-font-size);
+}
+.li:hover {
+  color: var(--main-font-color-hover);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}

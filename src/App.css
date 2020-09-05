@@ -1,0 +1,25 @@
+.init {
+  margin: 0;
+  padding: 0;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+.ul {
+  composes: init;
+  list-style: none;
+}
+/*flex - horizontal - vertical*/
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-between-center {
+  composes: flex-between;
+  align-items: center;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+}

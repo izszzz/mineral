@@ -1,0 +1,3 @@
+.main {
+  composes: flex-between from "./App.css";
+}

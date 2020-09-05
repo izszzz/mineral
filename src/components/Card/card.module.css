@@ -1,0 +1,21 @@
+.link {
+  composes: link from "../../App.css";
+}
+
+.cards {
+  composes: init from "../../App.css";
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: var(--main-theme-lightgray);
+  padding: 15px;
+  margin: 2px;
+}
+
+.card:hover {
+  background: var(--main-theme-skyblue);
+}

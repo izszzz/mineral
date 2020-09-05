@@ -1,0 +1,38 @@
+:root {
+  --main-theme-white: white;
+  --main-theme-black: #2b2b2b;
+  --main-theme-lightgray: #f5f5f5;
+  --main-theme-darkgray: dimgray;
+  --main-theme-gray: lightgray;
+  --main-theme-blue: #799fa7;
+  --main-theme-skyblue: #cee8dd;
+  --main-theme-linen: linen;
+  --main-theme-lightpink: #f5d5ca;
+  --main-theme-pink: #db9a96;
+
+  --main-bg-color: var(--main-theme-white);
+  --invert-bg-color: var(--main-theme-black);
+
+  --main-font-color: var(--main-theme-black);
+  --main-font-color-hover: var(--main-theme-gray);
+  --invert-font-color: var(--main-theme-white);
+  --invert-font-color-hover: var(--main-theme-gray);
+
+  --main-border-color: var(--main-theme-gray);
+
+  --article-biggest-font-size: 60px;
+  --article-bigger-font-size: 50px;
+  --article-big-font-size: 40px;
+  --article-small-font-size: 30px;
+  --article-smaller-font-size: 20px;
+  --article-smallest-font-size: 14px;
+
+  --biggest-font-size: 60px;
+  --bigger-font-size: 50px;
+  --big-font-size: 40px;
+  --small-font-size: 30px;
+  --smaller-font-size: 20px;
+  --smallest-font-size: 14px;
+
+  --border-radius: 10px;
+}

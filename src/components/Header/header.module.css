@@ -1,0 +1,43 @@
+.header {
+  composes: flex-between-center from "../../App.css";
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  padding: 0 2%;
+  background: var(--main-theme-blue);
+  color: var(--invert-font-color);
+}
+
+.nav {
+  composes: flex-between-center from "../../App.css";
+  width: 100%;
+  margin-left: 20px;
+}
+
+.h2 {
+  composes: init from "../../App.css";
+  cursor: pointer;
+}
+
+.ul {
+  composes: init from "../../App.css";
+  display: flex;
+  list-style: none;
+}
+.link {
+  composes: link from "../../App.css";
+  color: var(--invert-font-color);
+}
+
+.li {
+  margin-left: 15px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-size: var(--normal-font-size);
+}
+
+.li:hover {
+  color: var(--invert-font-color-hover);
+}
