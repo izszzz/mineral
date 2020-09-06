@@ -18,8 +18,6 @@
   --invert-font-color: var(--main-theme-white);
   --invert-font-color-hover: var(--main-theme-gray);
 
-  --main-border-color: var(--main-theme-gray);
-
   --article-biggest-font-size: 60px;
   --article-bigger-font-size: 50px;
   --article-big-font-size: 40px;
@@ -34,5 +32,6 @@
   --smaller-font-size: 20px;
   --smallest-font-size: 14px;
 
-  --border-radius: 10px;
+  --main-border-color: var(--main-theme-gray);
+  --main-border-radius: 10px;
 }

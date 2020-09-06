@@ -69,7 +69,7 @@ class BasicModal extends HTMLElement {
     .window{
       display: inline-block;
       background: white;
-      border-radius: 5px;
+      border-radius: var(--main-border-radius, 5px);
     }
     header{
       display: flex;

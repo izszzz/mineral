@@ -3,7 +3,7 @@ import ReactMarkdown from "react-markdown/with-html"
 // style
 import style from "../article.module.css"
 // md
-import Home from "./md/Home.md"
+import Home from "./Home.md"
 
 export default () => {
   const [md, setMD] = useState("")

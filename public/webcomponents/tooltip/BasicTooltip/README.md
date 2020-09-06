@@ -28,3 +28,4 @@
 | variable name        | type | default |
 | -------------------- | ---- | ------- |
 | --smallest-font-size | px   | 12px    |
+| --main-border-radius | px   | 5px     |

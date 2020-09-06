@@ -34,7 +34,8 @@
 
 ## CSS Variable
 
-| variable name     | type  | default |
-| ----------------- | ----- | ------- |
-| --big-font-size   | px    | 12px    |
-| --main-font-color | color | #2b2b2b |
+| variable name        | type  | default |
+| -------------------- | ----- | ------- |
+| --big-font-size      | px    | 12px    |
+| --main-border-radius | px    | 5px     |
+| --main-font-color    | color | #2b2b2b |

@@ -21,7 +21,7 @@ class DownloadBtn extends HTMLElement {
       color: white;
       background: var(--main-theme-lightpink);
       font-size: 20px;
-      border-radius: var(--border-radius);
+      border-radius: var(--main-border-radius);
     }
     div:hover{
       background: var(--main-theme-pink);

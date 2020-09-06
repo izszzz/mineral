@@ -22,7 +22,9 @@ class BasicChatMessage extends HTMLElement {
       p{
         background: ${position === "right" ? splited[1] : splited[0]};
         border-radius: ${
-          position === "right" ? "4px 4px 0 4px" : "4px 4px 4px 0"
+          position === "right"
+            ? "var(--main-border-radius) var(--main-border-radius) 0 var(--main-border-radius)"
+            : "var(--main-border-radius) var(--main-border-radius) var(--main-border-radius) 0"
         }
       }
     `

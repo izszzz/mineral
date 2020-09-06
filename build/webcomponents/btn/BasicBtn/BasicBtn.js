@@ -39,7 +39,7 @@ class BasicBtn extends HTMLElement {
       text-align: center;
       padding: 9px 13px;
       color: white;
-      border-radius: 5px;
+      border-radius: var(--main-border-radius, 5px);
       font-size: var(--smallest-font-size, 12px);
       cursor: pointer;
     }
