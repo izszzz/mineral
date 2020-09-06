@@ -14,7 +14,7 @@ export default () => (
         ["/document/:category", Cards],
         ["/document/:category/:show", Show],
       ].map(([path, e]) => (
-        <Route exact path={path} component={e} />
+        <Route exact path={path} component={e} key={path} />
       ))}
     </div>
   </article>
