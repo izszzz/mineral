@@ -22,6 +22,7 @@
 
 ## CSS Variable
 
-| variable name      | type | default |
-| ------------------ | ---- | ------- |
-| --normal-font-size | px   | 12px    |
+| variable name        | type | default |
+| -------------------- | ---- | ------- |
+| --normal-font-size   | px   | 12px    |
+| --main-border-radius | px   | 5px     |

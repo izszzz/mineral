@@ -42,7 +42,7 @@ class BasicTooltip extends HTMLElement {
       padding: 5px 8px;
       background: gray;
       color: white;
-      border-radius: 5px;
+      border-radius: var(--main-border-radius, 5px);
       font-size: var(--smallest-font-size, 11px);
     }
     .container:hover:after{
