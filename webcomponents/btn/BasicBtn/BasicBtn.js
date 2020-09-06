@@ -1,11 +1,12 @@
 class BasicBtn extends HTMLElement {
   constructor() {
     super()
-    const shadow = this.attachShadow({ mode: "open" }),
-      ary = [this.div, this.style_e]
-    ;[...ary] = ["div", "style"].map(tag => document.createElement(tag))
+    const shadow = this.attachShadow({ mode: "open" })
+    ;[this.style_e, this.div] = ["style", "div"].map(tag =>
+      document.createElement(tag)
+    )
     this.style_e.textContent = this.addStyle()
-    ary.forEach(e => shadow.appendChild(e))
+    ;[this.div, this.style_e].forEach(e => shadow.appendChild(e))
   }
   connectedCallback() {
     const [label, normal, hover, active] = [
