@@ -21,7 +21,7 @@ export default ({
       ["README.md", setMD],
       [`${show}.js`, setJS],
     ].forEach(([file, func]) =>
-      fetch(`/webcomponents/${category}/${show}/${file}`)
+      fetch(`/mineral/webcomponents/${category}/${show}/${file}`)
         .then(res => res.text())
         .then(res => func(res))
     )
