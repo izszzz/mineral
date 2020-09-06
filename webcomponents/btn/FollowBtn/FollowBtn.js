@@ -11,15 +11,18 @@ class FollowBtn extends HTMLElement {
   onClick = () => this.toggleAttribute("active")
 
   connectedCallback() {
-    const [label, color] = ["label", "color"].map(
-      attr => this.getAttribute(attr) || "".split(",")
+    const [
+      label = ["follow", "unfollow"],
+      color = [...Array(2).fill("steelblue")],
+    ] = ["label", "color"].map(val =>
+      this.hasAttribute(val) ? this.getAttribute(val).split(",") : undefined
     )
     this.style_e.textContent += `
     :host:before{
-      content: "${label[0] || "follow"}";
+      content: "${label[0]}";
     }
     :host([active]):before{
-      content: "${label[1] || "following"}";
+      content: "${label[1]}";
     }
     :host{
       background: ${color[0]};
@@ -37,7 +40,6 @@ class FollowBtn extends HTMLElement {
       user-select: none;
       display: inline-block;
       padding: 8px 20px;
-      background: steelblue;
       color: white;
       font-size: var(--smallest-font-size, 12px);
       border: solid 1px transparent;
@@ -51,7 +53,6 @@ class FollowBtn extends HTMLElement {
     }
     :host([active]){
       background: transparent;
-      color: steelblue; 
       border: solid 1px steelblue;
     }
   `

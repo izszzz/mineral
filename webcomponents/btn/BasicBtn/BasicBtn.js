@@ -9,24 +9,26 @@ class BasicBtn extends HTMLElement {
     ;[this.div, this.style_e].forEach(e => shadow.appendChild(e))
   }
   connectedCallback() {
-    const [label, normal, hover, active] = [
-      "label",
-      "normal",
-      "hover",
-      "active",
-    ].map(attr => this.getAttribute(attr))
+    const [
+      label = "test",
+      normal = "gray",
+      hover = "dimgray",
+      active = "darkgray",
+    ] = ["label", "normal", "hover", "active"].map(
+      val => this.getAttribute(val) || undefined
+    )
     this.style_e.textContent += `
     div{
-      background: ${normal || "gray"};
+      background: ${normal};
     }
     div:hover{
-      background: ${hover || "dimgray"};
+      background: ${hover}; 
     }
     div:active{
-      background: ${active || "darkgray"};
+      background: ${active};
     }
     div:before{
-      content: "${label || "test"}"
+      content: "${label}"
     }
     `
   }
