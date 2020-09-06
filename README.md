@@ -1,3 +1,3 @@
 # Mineral.web
 
-https://izszzz.github.io/mineral/home
+https://izszzz.github.io/mineral

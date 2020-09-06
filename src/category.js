@@ -2,7 +2,29 @@ import React from "react"
 import ReactDOM from "react-dom"
 export default {
   btn: {
-    BasicBtn: <basic-btn label="basicbtn" />,
+    BasicBtn: (
+      <>
+        <basic-btn label="basicbtn" />
+        <basic-btn
+          normal="skyblue"
+          hover="deepskyblue"
+          active="lightskyblue"
+          label="bluebtn"
+        />
+        <basic-btn
+          normal="salmon"
+          hover="indianred"
+          active="lightsalmon"
+          label="redbtn"
+        />
+        <basic-btn
+          normal="darkcyan"
+          hover="green"
+          active="lightseagreen"
+          label="greenbtn"
+        />
+      </>
+    ),
     FollowBtn: <follow-btn />,
   },
   tooltip: {
