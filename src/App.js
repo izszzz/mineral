@@ -11,7 +11,7 @@ import Header from "./components/Header/Header"
 import Main from "./layouts/Main"
 
 export default () => (
-  <Router>
+  <Router basename="/mineral">
     <Header />
     <main className={style.main}>
       <Switch>
