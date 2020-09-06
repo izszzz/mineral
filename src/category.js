@@ -1,13 +1,5 @@
 import React from "react"
 import ReactDOM from "react-dom"
-//import "./btn/BasicBtn/BasicBtn"
-//import "./btn/FollowBtn/FollowBtn"
-//import "./chat/BasicMessage/BasicMessage"
-//import "./dropdown/BasicDropdown/BasicDropdown"
-//import "./modal/BasicModal/BasicModal"
-//import "./gauge/BasicGauge/BasicGauge"
-//import "./points/BattlePoints/BattlePoints"
-//import "./tooltip/BasicTooltip/BasicTooltip"
 export default {
   btn: {
     BasicBtn: <basic-btn label="basicbtn" />,

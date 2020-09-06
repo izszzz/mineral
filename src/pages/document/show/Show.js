@@ -25,7 +25,7 @@ export default ({
         .then(res => res.text())
         .then(res => func(res))
     )
-  }, [])
+  }, [category, show])
   const onDownload = () => {
     const e = document.createElement("a"),
       file = new Blob([js], { type: "text/plain" })
