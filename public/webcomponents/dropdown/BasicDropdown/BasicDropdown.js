@@ -36,7 +36,7 @@ class BasicDropdown extends HTMLElement {
     this.container.toggleAttribute("active")
   }
   onClickWindow = e => this.container.removeAttribute("active")
-  disconnectedCallbak() {
+  disconnectedCallback() {
     this.eventsList.forEach(([e, func]) => e.removeEventListener("click", func))
   }
   addStyle = () => `
