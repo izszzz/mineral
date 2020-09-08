@@ -35,7 +35,7 @@ table {
 
 .preview {
   composes: flex-center from "../App.css";
-  padding: 30px 0;
+  padding: 0px 0;
   background: var(--main-theme-linen);
   border-radius: var(--main-border-radius);
 }

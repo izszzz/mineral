@@ -95,4 +95,14 @@ export default {
       </div>
     ),
   },
+  bg: {
+    Background1: (
+      <background-1
+        number="30"
+        colors="red,blue,green"
+        height="200"
+        width="400"
+      />
+    ),
+  },
 }

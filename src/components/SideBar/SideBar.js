@@ -13,6 +13,7 @@ export default () => (
           ["Chat", "chat"],
           ["Gauge", "gauge"],
           ["Points", "points"],
+          ["Background", "bg"],
         ]}
       />
     </ul>

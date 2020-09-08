@@ -8,7 +8,6 @@
   hover="deepskyblue"
   active="lightskyblue"
   label="blue"
-  path="#blue"
 ></basic-btn>
 ```
 
