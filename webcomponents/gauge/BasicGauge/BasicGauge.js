@@ -12,9 +12,7 @@ class BasicGauge extends HTMLElement {
     ;[this.style_e, this.p, container, frame, bar] = [
       "style",
       "p",
-      "div",
-      "div",
-      "div",
+      ...Array(3).fill("div"),
     ].map(tag => document.createElement(tag))
     // add class
     ;[

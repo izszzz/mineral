@@ -5,15 +5,16 @@ class BasicChatMessage extends HTMLElement {
     ;[this.style_e, this.p] = ["style", "p"].map(tag =>
       document.createElement(tag)
     )
-    this.style_e.textContent = this.addStyle()
     ;[this.p, this.style_e].forEach(e => shadow.appendChild(e))
+    this.style_e.textContent = this.addStyle()
   }
   connectedCallback() {
-    const [color, text, position] = ["color", "text", "position"].map(attr =>
-      this.getAttribute(attr)
+    const [color, text, position] = ["color", "text", "position"].map(key =>
+      this.getAttribute(key)
     )
     this.p.innerText = text
-    const splited = color.split(",")
+    const splited = color.split(","),
+      radius = "var(--main-border-radius)"
 
     this.style_e.textContent += `
       :host{
@@ -21,11 +22,11 @@ class BasicChatMessage extends HTMLElement {
       }
       p{
         background: ${position === "right" ? splited[1] : splited[0]};
-        border-radius: ${
+        border-radius: ${radius} ${radius} ${
           position === "right"
-            ? "var(--main-border-radius) var(--main-border-radius) 0 var(--main-border-radius)"
-            : "var(--main-border-radius) var(--main-border-radius) var(--main-border-radius) 0"
-        }
+            ? "0 " + radius 
+            : radius +" 0"
+        };
       }
     `
   }

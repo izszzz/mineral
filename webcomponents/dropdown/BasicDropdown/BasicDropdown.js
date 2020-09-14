@@ -5,18 +5,13 @@ class BasicDropdown extends HTMLElement {
     let lists_slot, style
     ;[this.container, lists_slot, this.target_slot, style] = [
       "div",
-      "slot",
-      "slot",
+      ...Array(2).fill("slot"),
       "style",
     ].map(tag => document.createElement(tag))
     this.eventsList = [
       [this.target_slot, this.onClickTargetSlot],
       [window, this.onClickWindow],
     ]
-    style.textContent = this.addStyle()
-    this.container.classList.add("container")
-    // addEventListener
-    this.eventsList.forEach(([e, func]) => e.addEventListener("click", func))
     // setAttribute
     ;[
       [lists_slot, "lists"],
@@ -30,13 +25,16 @@ class BasicDropdown extends HTMLElement {
     ].forEach(([parent, children]) =>
       children.forEach(child => parent.appendChild(child))
     )
+    style.textContent = this.addStyle()
+    this.container.classList.add("container")
+    this.eventsList.forEach(([e, func]) => e.addEventListener("click", func))
   }
   onClickTargetSlot = e => {
     e.stopPropagation()
     this.container.toggleAttribute("active")
   }
   onClickWindow = e => this.container.removeAttribute("active")
-  disconnectedCallbak() {
+  disconnectedCallback() {
     this.eventsList.forEach(([e, func]) => e.removeEventListener("click", func))
   }
   addStyle = () => `
@@ -78,9 +76,9 @@ class BasicDropdownList extends HTMLElement {
     ;[this.li, this.style_e] = ["li", "style"].map(tag =>
       document.createElement(tag)
     )
-    this.style_e.textContent = this.addStyle()
     // appendChild
     ;[this.li, this.style_e].forEach(e => shadow.appendChild(e))
+    this.style_e.textContent = this.addStyle()
   }
 
   connectedCallback() {
