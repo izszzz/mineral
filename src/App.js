@@ -10,6 +10,7 @@ import Header from "./components/Header/Header"
 // layouts
 import Main from "./layouts/Main"
 
+
 export default () => (
   <Router basename="/mineral">
     <Header />

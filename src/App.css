@@ -11,8 +11,11 @@
   list-style: none;
 }
 /*flex - horizontal - vertical*/
-.flex-between {
+.flex{
   display: flex;
+}
+.flex-between {
+  composes: flex;
   justify-content: space-between;
 }
 .flex-between-center {
@@ -20,6 +23,6 @@
   align-items: center;
 }
 .flex-center {
-  display: flex;
+  composes: flex;
   justify-content: center;
 }

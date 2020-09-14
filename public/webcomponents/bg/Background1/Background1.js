@@ -1,4 +1,4 @@
-random = (max, min) => Math.floor(Math.random() * (max - min) + min)
+random = (max, min) => ~~(Math.random() * (max - min) + min)
 class Background1 extends HTMLElement {
   constructor() {
     super()
@@ -9,15 +9,15 @@ class Background1 extends HTMLElement {
       "div",
       "canvas",
     ].map(tag => document.createElement(tag))
-    this.ctx = this.canvas.getContext("2d")
-    this.style_e.textContent = this.style()
-    window.addEventListener("resize", this.resize)
     ;[
       [this.div, [this.canvas]],
       [shadow, [this.div, this.style_e]],
     ].forEach(([parent, children]) =>
       children.forEach(child => parent.appendChild(child))
     )
+    this.ctx = this.canvas.getContext("2d")
+    this.style_e.textContent = this.style()
+    window.addEventListener("resize", this.resize)
   }
 
   connectedCallback() {
@@ -63,7 +63,7 @@ class Background1 extends HTMLElement {
 
   style = () => `
     div{
-      width: 100%;
+      width: 100vw;
       height: 100vh;
       margin: 0;
       padding: 0;
@@ -78,8 +78,7 @@ class Background1 extends HTMLElement {
 class Polygon {
   constructor(ctx, winH, winW, colors) {
     this.x = Math.floor(random(winW, 0))
-    this.y = winH
-    this.winH = winH
+    this.y = this.winH = winH
     this.winW = winW
     this.scale = random(50, 3)
     this.velocity = random(5, 1, -1) + random(10, 0) / 10
