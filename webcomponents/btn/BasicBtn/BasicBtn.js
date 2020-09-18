@@ -5,8 +5,8 @@ class BasicBtn extends HTMLElement {
     ;[this.style_e, this.div] = ["style", "div"].map(tag =>
       document.createElement(tag)
     )
-    this.style_e.textContent = this.addStyle()
     ;[this.div, this.style_e].forEach(e => shadow.appendChild(e))
+    this.style_e.textContent = this.style()
   }
   connectedCallback() {
     const [
@@ -17,23 +17,17 @@ class BasicBtn extends HTMLElement {
     ] = ["label", "normal", "hover", "active"].map(
       val => this.getAttribute(val) || undefined
     )
-    this.style_e.textContent += `
-    div{
-      background: ${normal};
-    }
-    div:hover{
-      background: ${hover}; 
-    }
-    div:active{
-      background: ${active};
-    }
-    div:before{
-      content: "${label}"
-    }
-    `
+    this.style_e.textContent +=
+      [
+        [normal, ""],
+        [hover, ":hover"],
+        [active, ":active"],
+      ]
+        .map(([val, pse]) => `div${pse}{ background: ${val}; }`)
+        .join() + `div:before{ content: "${label}";}`
   }
 
-  addStyle = () => `
+  style = () => `
     div{
       user-select: none;
       vertical-align: middle;
