@@ -101,8 +101,13 @@ export default {
         number="30"
         colors="red,blue,green"
         height="200"
-        width="400"
+        width="200"
       />
+    ),
+  },
+  icon: {
+    HeartIcon: (
+      <heart-icon size="50" stroke-width="8" stroke="red" fill="salmon" />
     ),
   },
 }

@@ -14,6 +14,7 @@ export default () => (
           ["Gauge", "gauge"],
           ["Points", "points"],
           ["Background", "bg"],
+          ["Icon", "icon"],
         ]}
       />
     </ul>
