@@ -11,12 +11,13 @@ class FollowBtn extends HTMLElement {
   onClick = () => this.toggleAttribute("active")
 
   connectedCallback() {
-    const [
-      label = ["follow", "unfollow"],
-      color = [...Array(2).fill("steelblue")],
-    ] = ["label", "color"].map(val =>
-      this.hasAttribute(val) ? this.getAttribute(val).split(",") : undefined
-    )
+    const f = "follow",
+      [label = [f, "un" + f], color = [...Array(2).fill("steelblue")]] = [
+        "label",
+        "color",
+      ].map(val =>
+        this.hasAttribute(val) ? this.getAttribute(val).split(",") : void 0
+      )
     this.style_e.textContent += `
     :host:before{
       content: "${label[0]}";
@@ -46,10 +47,9 @@ class FollowBtn extends HTMLElement {
       border-radius: 100px;
       cursor: pointer;
       transition: 
-        border ease 0.3s,
-        color ease 0.3s,
-        width ease 0.3s,
-        background ease 0.3s;
+        ${["border", "color", "width", "background"].map(
+          p => ` ${p} ease 0.3s`
+        )};
     }
     :host([active]){
       background: transparent;

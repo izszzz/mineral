@@ -13,11 +13,12 @@
 
 ## Attribute
 
-| summary             | attribute | value | default | type        |
-| ------------------- | --------- | ----- | ------- | ----------- |
-| button normal color | normal    |       | empty   | color       |
-| button text         | label     |       | empty   | string      |
-| button path         | path      |       | empty   | path or URL |
+| summary             | attribute | value | default | type   |
+| ------------------- | --------- | ----- | ------- | ------ |
+| button normal color | normal    |       | empty   | color  |
+| button hover color  | hover     |       | empty   | color  |
+| button active color | active    |       | empty   | color  |
+| button text         | label     |       | empty   | string |
 
 ## CSS Variable
 
