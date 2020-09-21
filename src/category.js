@@ -37,6 +37,9 @@ export default {
       </basic-tooltip>
     ),
   },
+  input: {
+    InputKnob: <input-knob max="100" min="0" value="50" />,
+  },
   dropdown: {
     BasicDropdown: (
       <basic-dropdown>

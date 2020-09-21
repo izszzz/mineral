@@ -8,6 +8,7 @@ export default () => (
       <Lists
         lists={[
           ["Button", "btn"],
+          ["Input", "input"],
           ["Tooltip", "tooltip"],
           ["Dropdown", "dropdown"],
           ["Chat", "chat"],
