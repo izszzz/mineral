@@ -1,16 +1,16 @@
-# HeartIcon
+# HeartBtn
 
 ## Demo
 
 ```html
-<heart-icon></heart-icon>
+<heart-btn></heart-btn>
 ```
 
 ## Attribute
 
-| summary           | attribute    | value | default | type   |
-| ----------------- | ------------ | ----- | ------- | ------ |
-| icon size         | size         |       | 100     | number |
-| icon fill color   | fill         |       | none    | color  |
-| icon stroke color | stroke       |       | red     | color  |
-| icon stroke width | stroke-width |       | 5       | color  |
+| summary          | attribute    | value | default | type   |
+| ---------------- | ------------ | ----- | ------- | ------ |
+| btn size         | size         |       | 100     | number |
+| btn fill color   | fill         |       | none    | color  |
+| btn stroke color | stroke       |       | red     | color  |
+| btn stroke width | stroke-width |       | 5       | color  |

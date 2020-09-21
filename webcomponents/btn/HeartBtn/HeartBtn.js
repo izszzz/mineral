@@ -1,10 +1,11 @@
 ;(() => {
-  const [a, c, s, h, f, w, g, r, tp, si, st] = [
+  const [a, c, s, ht, f, h, w, g, r, tp, si, st] = [
       "active",
       "click",
       "svg",
       "heart",
       "fill",
+      "height",
       "width",
       "gray",
       "red",
@@ -39,9 +40,9 @@
       ].forEach(([parent, children]) =>
         children.forEach(child => parent.appendChild(child))
       )
-      this.path.classList.add(h)
+      this.path.classList.add(ht)
       this.path.addEventListener(c, this.onClick)
-      this.style_e.textContent = this.style()
+      this.style_e.textContent = this.addStyle()
     }
 
     connectedCallback() {
@@ -53,11 +54,11 @@
         [stw, strokeWidth],
         ["d", this.calcHeartPath(+strokeWidth)],
       ].forEach(([key, val]) => val && this.path.setAttribute(key, val))
-
-      this[s].style.cssText = ["height", w].map(p => p + `:${size}px;`).join("")
-      this.style_e.textContent += `.${h}{transform-origin:${(
+      this.style.cssText = h + `:${size}px;`
+      this[s].style.cssText = [h, w].map(p => p + `:${size}px;`).join("")
+      this.style_e.textContent += `.${ht}{transform-origin:${(
         size + "px "
-      ).repeat(2)};}.${h}:hover{${st}:${stroke};}`
+      ).repeat(2)};}.${ht}:hover{${st}:${stroke};}`
     }
     disconnectedCallback() {
       this.path.removeEventListener(c, this.onClick)
@@ -92,13 +93,13 @@
       )
     }
 
-    style = () => `
-    .${h} {
+    addStyle = () => `
+    .${ht} {
       user-select: none;
       cursor: pointer;
       transition: ${f} 0.3s ease;
     }
-    .${h}[${a}] {
+    .${ht}[${a}] {
       animation: hA 200ms ease;
     }
     @keyframes hA {
@@ -113,5 +114,5 @@
     }
   `
   }
-  customElements.define(h + "-btn", HeartBtn)
+  customElements.define(ht + "-btn", HeartBtn)
 })()
