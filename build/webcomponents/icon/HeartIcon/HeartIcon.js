@@ -16,24 +16,25 @@ class HeartIcon extends HTMLElement {
   }
 
   connectedCallback() {
-    const [size = 100, fill = "none", stroke = "red", strokeWidth = 5] = [
-      "size",
-      "fill",
-      "stroke",
-      "stroke-width",
-    ].map(key => this.getAttribute(key) || undefined)
+    const [f, si, st] = ["fill", "size", "stroke"],
+      stw = st + "-width",
+      [size = 100, fill = "none", stroke = "red", strokeWidth = 5] = [
+        si,
+        f,
+        st,
+        stw,
+      ].map(key => this.getAttribute(key) || void 0)
 
     ;[
-      ["stroke", stroke],
-      ["stroke-width", strokeWidth],
+      [st, stroke],
+      [stw, strokeWidth],
       ["d", this.calcHeartPath(+strokeWidth)],
-      ["fill", fill],
+      [f, fill],
     ].forEach(([key, val]) => val && this.path.setAttribute(key, val))
 
-    size &&
-      (this.style_e.textContent += `svg{${["height", "width"]
-        .map(prop => prop + `:${size}px;`)
-        .join("")}}`)
+    this.style_e.textContent += `svg{${["height", "width"]
+      .map(prop => prop + `:${size}px;`)
+      .join("")}}`
   }
 
   calcHeartPath(strokeWidth = 0) {
@@ -41,13 +42,13 @@ class HeartIcon extends HTMLElement {
       halfWidth = strokeWidth / 2,
       calcPath = (num, str) =>
         str === "p" ? num + halfWidth : str === "m" ? num - halfWidth : null,
-      twentyfive = Array(2).fill(calcPath(25, m)).join(" "),
+      twentyfive = (" " + calcPath(25, m)).repeat(2),
       eight = calcPath(8, p)
     return `
       M 50 ${calcPath(90, m)}
       L ${calcPath(92, m)} 50
-      A ${twentyfive} 0 0 0 50 ${calcPath(15, p)} 
-      A ${twentyfive} 0 0 0 ${eight} 50
+      A${twentyfive} 0 0 0 50 ${calcPath(15, p)} 
+      A${twentyfive} 0 0 0 ${eight} 50
       L ${eight} 50
       Z
     `

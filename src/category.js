@@ -26,6 +26,9 @@ export default {
       </>
     ),
     FollowBtn: <follow-btn />,
+    HeartBtn: (
+      <heart-btn size="50" stroke-width="5" stroke="salmon" fill="salmon" />
+    ),
   },
   tooltip: {
     BasicTooltip: (

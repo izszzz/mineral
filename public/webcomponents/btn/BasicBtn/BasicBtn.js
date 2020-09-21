@@ -9,22 +9,21 @@ class BasicBtn extends HTMLElement {
     this.style_e.textContent = this.style()
   }
   connectedCallback() {
-    const [
-      label = "test",
-      normal = "gray",
-      hover = "dimgray",
-      active = "darkgray",
-    ] = ["label", "normal", "hover", "active"].map(
-      val => this.getAttribute(val) || undefined
-    )
+    const [a, h, g] = ["active", "hover", "gray"],
+      [label = "test", normal = g, hover = "dim" + g, active = "dark" + g] = [
+        "label",
+        "normal",
+        h,
+        a,
+      ].map(val => this.getAttribute(val) || void 0)
     this.style_e.textContent +=
       [
         [normal, ""],
-        [hover, ":hover"],
-        [active, ":active"],
+        [hover, ":" + h],
+        [active, ":" + a],
       ]
-        .map(([val, pse]) => `div${pse}{ background: ${val}; }`)
-        .join() + `div:before{ content: "${label}";}`
+        .map(([v, p]) => `div${p}{background: ${v};}`)
+        .join("") + `div:before{ content: "${label}";}`
   }
 
   style = () => `

@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/mineral/static/css/main.ab605cad.chunk.css",
-    "main.js": "/mineral/static/js/main.f67187da.chunk.js",
-    "main.js.map": "/mineral/static/js/main.f67187da.chunk.js.map",
+    "main.js": "/mineral/static/js/main.4e55648a.chunk.js",
+    "main.js.map": "/mineral/static/js/main.4e55648a.chunk.js.map",
     "runtime-main.js": "/mineral/static/js/runtime-main.c34d3615.js",
     "runtime-main.js.map": "/mineral/static/js/runtime-main.c34d3615.js.map",
     "static/js/2.3a5a95b2.chunk.js": "/mineral/static/js/2.3a5a95b2.chunk.js",
     "static/js/2.3a5a95b2.chunk.js.map": "/mineral/static/js/2.3a5a95b2.chunk.js.map",
     "index.html": "/mineral/index.html",
-    "precache-manifest.079410a8727bfc4e0377b41b07c1ca1b.js": "/mineral/precache-manifest.079410a8727bfc4e0377b41b07c1ca1b.js",
+    "precache-manifest.24be7fd6c110318f82d6ceb7f53273d0.js": "/mineral/precache-manifest.24be7fd6c110318f82d6ceb7f53273d0.js",
     "service-worker.js": "/mineral/service-worker.js",
     "static/css/main.ab605cad.chunk.css.map": "/mineral/static/css/main.ab605cad.chunk.css.map",
     "static/js/2.3a5a95b2.chunk.js.LICENSE.txt": "/mineral/static/js/2.3a5a95b2.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.c34d3615.js",
     "static/js/2.3a5a95b2.chunk.js",
     "static/css/main.ab605cad.chunk.css",
-    "static/js/main.f67187da.chunk.js"
+    "static/js/main.4e55648a.chunk.js"
   ]
 }
