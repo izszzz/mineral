@@ -27,10 +27,21 @@ document.createElement("input-knob").style_e.textContent += "width: 0;"
 
 InputKnob CSS Classes
 
-| summary             | class              |
-| ------------------- | ------------------ |
-| inputknob container | div.container      |
-| inputknob label     | p.label            |
-| inputknob knob      | div.knob           |
-| inputknob knob line | div.knob::after    |
-| inputknob input     | input[type=number] |
+| summary             | class                |
+| ------------------- | -------------------- |
+| inputknob container | div.container        |
+| inputknob label     | p.label              |
+| inputknob knob      | div.knob             |
+| inputknob knob line | div.knob::after      |
+| inputknob input     | input\[type=number\] |
+
+## Event
+
+### onchange
+
+InputKnob have onchange property.
+first argument is inputknob value.
+
+```js
+document.createElement("input-knob").onchange = value => console.log(value)
+```
