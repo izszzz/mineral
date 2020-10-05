@@ -19,20 +19,15 @@ class InputKnob extends HTMLElement {
       [document.body, "mousemove", this.mouseMove],
       [document.body, "mouseup", this.mouseUp],
     ]
-    //addEventListener
     ;[
       [this.input, "change", this.changeInput],
       ...this.events,
     ].forEach(([e, action, func]) => e.addEventListener(action, func))
-
-    //add class
     ;[
       [this.label, "label"],
       [this.knob, "knob"],
       [container, "container"],
     ].forEach(([e, name]) => e.classList.add(name))
-
-    // appendChild
     ;[
       [container, [this.label, this.knob, this.input]],
       [shadow, [container, this.style_e]],
@@ -101,7 +96,7 @@ class InputKnob extends HTMLElement {
       this.halfDeg
     ))
   disconnectedCallback() {
-    ;[...this.events].forEach(([e, action, func]) =>
+    this.events.forEach(([e, action, func]) =>
       e.removeEventListener(action, func)
     )
   }

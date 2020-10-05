@@ -116,4 +116,16 @@ export default {
       <heart-icon size="50" stroke-width="8" stroke="red" fill="salmon" />
     ),
   },
+  header: {
+    BasicHeader: (
+      <basic-header>
+        <h1 slot="logo">BasicHeader</h1>
+        <ul slot="ul">
+          <li>test1</li>
+          <li>test2</li>
+          <li>test3</li>
+        </ul>
+      </basic-header>
+    ),
+  },
 }
