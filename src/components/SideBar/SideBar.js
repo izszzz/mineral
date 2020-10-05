@@ -7,6 +7,7 @@ export default () => (
     <ul className={style.ul}>
       <Lists
         lists={[
+          ["Header", "header"],
           ["Button", "btn"],
           ["Input", "input"],
           ["Tooltip", "tooltip"],
